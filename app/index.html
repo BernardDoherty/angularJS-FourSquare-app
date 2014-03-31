@@ -17,8 +17,7 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/cerulean-bootstrap-theme.min.css">
-    <link rel="stylesheet" href="styles/toaster.css">
+    <link rel="stylesheet" href="styles/superhero-bootstrap-theme.min.css">
     <!-- endbuild -->
   </head>
   <body ng-app="angularFoursquareApp">
@@ -46,22 +45,33 @@
     <![endif]-->
 
     <!-- build:js scripts/vendor.js -->
-    <script type="text/javascript" src="scripts/vendor/toaster.js"></script>
     <!-- bower:js -->
-    <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- endbower -->
+       <script src="bower_components/jquery/jquery.js"></script>
+       <script src="bower_components/angular/angular.js"></script>
+       <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+       <script src="bower_components/angular-resource/angular-resource.js"></script>
+       <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+       <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+       <script src="bower_components/angular-route/angular-route.js"></script>
+       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+       <!-- endbower -->
     <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/placesExplorerController.js"></script>
-        <script src="scripts/services/placesExplorerService.js"></script>
-        <!-- endbuild -->
+    <!-- Load app main script -->
+    <script src="scripts/app.js"></script>
+
+    <!-- Load controllers -->
+    <script src="scripts/controllers/placesPhotosController.js"></script>
+    <script src="scripts/controllers/placesExplorerController.js"></script>
+    
+      <!-- Load services -->
+    <script src="scripts/services/placesExplorerService.js"></script>
+    <script src="scripts/services/placesPhotosService.js"></script>
+
+    <!-- Load custom filters -->
+    <script src="scripts/filters/placeNameCategoryFilter.js"></script>
+
+    <!-- endbuild -->
 </body>
 </html>
